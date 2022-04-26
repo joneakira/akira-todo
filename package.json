@@ -16,9 +16,12 @@
     "@supabase/supabase-js": "^1.28.5",
     "@svgr/webpack": "^6.2.1",
     "framer-motion": "^4.1.17",
+    "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-i18next": "^11.16.7"
   },
   "devDependencies": {
     "eslint": "8.4.1",

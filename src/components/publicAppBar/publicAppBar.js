@@ -1,9 +1,13 @@
 import React, {useEffect} from 'react'
 import { Box, Text, Button, Flex, useColorMode, Alert } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
 import Sun from '../../assets/icons/sun.svg'
 import Moon from '../../assets/icons/half-moon.svg'
 
+
 export default function PublicAppBar() {
+  const {t, i18n} = useTranslation()
   const {colorMode, toggleColorMode} = useColorMode()
 
   
@@ -16,14 +20,22 @@ export default function PublicAppBar() {
     padding={'15px'}
     pt={'25px'}
     justifyContent={'space-between'}>
-      <Button>
-        <Text>En-US</Text>
+      <Button
+      onClick={() => i18next.changeLanguage(i18next.language === 'en' ? 'pt' : 'en', (err) => {
+        if (err) return console.log('something went wrong loading', err)
+      }
+      )}
+      borderRadius={0}
+      variant={'ghost'}>
+        <Text>
+          {i18n.language === 'en' ? 'pt-BR' : 'en-US'}
+        </Text>
       </Button>
 
       <Button
       width={'50px'}
       height={'45px'}
-      borderRadius={'45'}
+      borderRadius={0}
       onClick={toggleColorMode}
       variant={'ghost'}>
         <Flex

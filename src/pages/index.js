@@ -8,11 +8,14 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { colors } from '../helpers/colors';
+import { useTranslation } from 'react-i18next';
 
+//components
 import PublicAppBar from '../components/publicAppBar/publicAppBar';
 
 
 const Home = () => {
+  const {t, i18n} = useTranslation();
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,7 +41,7 @@ const Home = () => {
         color={'#000'}
         fontWeight={'500'}
         textAlign='center' m='6'>
-          Welcome to Todo App
+          {t('text')}
         </Text>
         {error && (
           <Alert status='error' mb='6'>
@@ -46,9 +49,6 @@ const Home = () => {
             <Text textAlign='center'>{error}</Text>
           </Alert>
         )}
-        <Button>
-
-        </Button>
       </Box>
     </Flex>
   )

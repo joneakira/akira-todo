@@ -15,5 +15,10 @@ module.exports = {
     });
 
     return config;
+  },
+  i18n: {
+    locales: ['pt-BR', 'en-US'],
+    defaultLocale: 'en-US',
+    localeDetection: false,
   }
 }
