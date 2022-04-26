@@ -2,16 +2,15 @@ import {
   Alert,
   AlertIcon,
   Button,
-  chakra,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Stack,
   Text,
   Box,
+  Flex,
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { colors } from '../helpers/colors';
+
+import PublicAppBar from '../components/publicAppBar/publicAppBar';
+
 
 const Home = () => {
   const [email, setEmail] = useState('');
@@ -24,40 +23,34 @@ const Home = () => {
   }
 
   const submitHandler = () => {
-    
+
   }
 
   return(
-    <Box minH='100vh' py='12' px={{base: '4', lg: '8'}} bg='gray.50' >
+    <Flex
+    direction={'column'}
+    alignItems={'center'}
+    minH='100vh'
+    bg={colors.bg100()} >
+      <PublicAppBar />
       <Box maxW='md' mx='auto' >
-        <Heading textAlign='center' m='6'>
+        <Text
+        color={'#000'}
+        fontWeight={'500'}
+        textAlign='center' m='6'>
           Welcome to Todo App
-        </Heading>
+        </Text>
         {error && (
           <Alert status='error' mb='6'>
             <AlertIcon />
             <Text textAlign='center'>{error}</Text>
           </Alert>
         )}
-        <Box 
-          py='8'
-          px={{base: '4', md: '10'}}
-          shadow='base'
-          rounded={{sm: 'lg'}}
-          bg='white' >
-            {isSubmitted ? (
-              <Heading size='md' textAlign='center' color='gray.50'>
-                Please check {email} for login link
-              </Heading>
-            ) : (
-              <chakra.form onSubmit={submitHandler} >
+        <Button>
 
-              </chakra.form>
-            )}
-
-        </Box>
+        </Button>
       </Box>
-    </Box>
+    </Flex>
   )
 }
 
