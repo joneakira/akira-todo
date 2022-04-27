@@ -5,12 +5,20 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   en: {
     translation: {
-      "text": "Welcome to React and react-i18next"
+      "text": "Welcome to React and react-i18next",
+      "email": "E-MAIl",
+      "password": "PASSWORD",
+      "login": "LOGIN",
+      "signup": "SIGNUP"
     }
   },
   pt: {
     translation: {
-      "text": "arroz"
+      "text": "arroz",
+      "email": "E-MAIL",
+      "password": "SENHA",
+      "login": "ENTRAR",
+      "signup": "CADASTRAR-SE"
     }
   }
 };
