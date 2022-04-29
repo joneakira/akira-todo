@@ -15,6 +15,7 @@
     "@fontsource/press-start-2p": "^4.5.5",
     "@supabase/supabase-js": "^1.28.5",
     "@svgr/webpack": "^6.2.1",
+    "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "i18next": "^21.6.16",
     "i18next-browser-languagedetector": "^6.1.4",
