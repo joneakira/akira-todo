@@ -22,7 +22,8 @@
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-i18next": "^11.16.7"
+    "react-i18next": "^11.16.7",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "8.4.1",
