@@ -2,15 +2,16 @@ import { Flex, Text, keyframes } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 
 const AkiraPlate = () => {
-  const animationKeyFrames = keyframes`
-    0% {opacity: 0;}
-    100% {opacity: 1;} 
+  const animationKeyframes = keyframes`
+    0% {transform: scale(0.8); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;} 
   `
 
-  const animation = `${animationKeyFrames} 2s`;
+  const animation = `${animationKeyframes} 1.5s`;
   return(
     <Flex
-    my={'40px'}
+    mt={'40px'}
+    mb={'20px'}
     as={motion.div}
     width={'75%'}
     height={'90px'}
@@ -18,8 +19,11 @@ const AkiraPlate = () => {
     justifyContent={'center'}
     alignItems={'center'}
     backgroundColor={'bg.200'}
-    animation={animation} >
-      <Text color={'bg.100'} >
+    animation={animation}
+    minWidth={'190px'} >
+      <Text
+      fontSize={{base: '3rem', 'md': '4rem', 'lg': '5.5rem'}}
+      color={'bg.100'} >
         AKIRA
       </Text>
     </Flex>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import {
   Alert,
   AlertIcon,
@@ -6,7 +7,6 @@ import {
   Box,
   Flex,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 import { colors } from '../helpers/colors';
 import { useTranslation } from 'react-i18next';
 
@@ -46,9 +46,13 @@ const Home = () => {
       justifyContent={'center'}
       alignItems={'center'} >
         <Box
+        minWidth={'210px'}
+        position={'relative'}
+        right={-3}
+        bottom={-3}
         backgroundColor={colors.shadowA()}
-        width={'45vw'}
-        height={'70vh'} >
+        width={{base: '85vw', 'md': '50vw'}}
+        height={{base: '75vh'}} >
           <Box
           justifyContent={'center'}
           alignItems={'center'}
@@ -65,7 +69,6 @@ const Home = () => {
               type === 'signin' ?
               <SignIn type={type} setType={setType} /> :
               <SignUp type={type} setType={setType} />
-
             }
               
           </Box> 

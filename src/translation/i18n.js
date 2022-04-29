@@ -6,10 +6,12 @@ const resources = {
   en: {
     translation: {
       "text": "Welcome to React and react-i18next",
-      "email": "E-MAIl",
+      "email": "E-MAIL",
       "password": "PASSWORD",
       "login": "LOGIN",
-      "signup": "SIGNUP"
+      "signup": "SIGN UP",
+      "username": "NAME",
+      "confirmPassword": "CONFIRM YOUR PASSWORD"
     }
   },
   pt: {
@@ -18,7 +20,9 @@ const resources = {
       "email": "E-MAIL",
       "password": "SENHA",
       "login": "ENTRAR",
-      "signup": "CADASTRAR-SE"
+      "signup": "CADASTRAR-SE",
+      "username": "NOME",
+      "confirmPassword": "CONFIRME SUA SENHA"
     }
   }
 };
